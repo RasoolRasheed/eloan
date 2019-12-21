@@ -122,12 +122,4 @@ public class SecurityTypeController {
 
 	}
 	
-	//@GetMapping("/stype")
-	@RequestMapping(value = "/stype.do", method = RequestMethod.GET)
-	public ResponseEntity<String> securityType(String data){
-		List<SecurityTypes> st = getStService().listSecurityTypes();
-		JSONObject jo = new JSONObject();
-		jo.put("s", st);
-		return new ResponseEntity<>(jo.toString(),HttpStatus.OK);
-	}
 }
